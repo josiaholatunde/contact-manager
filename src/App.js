@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Switch, Route} from 'react-router-dom';
+import { HashRouter as Router, Switch, Route} from 'react-router-dom';
 import Contacts from './containers/Contacts';
 import Header from './components/Header';
 import { Provider } from './Context';
@@ -16,7 +16,7 @@ class App extends Component {
       <Provider>
         <Header branding="Contact Manager" />
         <div className="container">
-          <BrowserRouter>
+          <Router>
             <Switch>
               <Route path='/contact/add' exact component={AddContact}></Route>
               <Route path='/about/:name' exact component={About}></Route>
@@ -24,7 +24,7 @@ class App extends Component {
               <Route path='/' exact component={Contacts}></Route>
               <Route component={NotFound}></Route>
             </Switch>
-          </BrowserRouter>
+          </Router>
         </div>
         </Provider>
       </div>
