@@ -1,0 +1,3 @@
+form input.text-input:focus,input[type=submit]:focus {
+    box-shadow: none;
+}
